@@ -22,16 +22,18 @@
 (PRINT A)
 
  **打印的结果是**：2
+lisp```
 
 ### 示例 2: 变量定义和打印
+
 
 ```lisp
 (IF ((EQUAL ‘1’ ‘1’)) ((PRINT “CONGRATS”)) (SET A ‘2’))
 (PRINT A)
 
  **打印的结果是**：CONGRATS
- 
-### 示例 2: 变量定义和打印
+ lisp```
+### 示例 3: 变量定义和打印
 
 ```lisp
 (SET C ‘3’)
@@ -45,4 +47,4 @@
                 2
                 1
                 
-
+ lisp```
