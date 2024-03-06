@@ -1,0 +1,132 @@
+1.function void check_token:
+	I  create 7 strings which include :”(“ “CAR” “CDR” “CONS” “IF” “WHILE” “PRINT” “)”.
+	Then I write a loop which can store numbers into an array.Last, compare the array with (0 2 3 	5 6 13 1).
+
+2.function int check_literal ,lisp* parse_literal and lisp* parse_num:
+	I create a test.ncl which include：(
+  							((SET A ‘(2 3))’)
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get the return-value 	of this function is False;
+
+3.function int parse_token:
+	I create a test.ncl which include：(
+  							(SET A '2')
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get an string which 	is :
+	(
+	(
+	SET
+	(
+	A
+	2
+	)
+	(
+	PRINT
+	A
+	)
+	)
+
+4.function void parse_prog:
+	I create a test.ncl which include:(
+  							)SET A '2')
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a ”(”?
+
+5.function void parse_instrct:
+	I create a test.ncl which include:(
+  							(SET A ‘2’)
+  							)PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a ”(”?
+6.function void parse_func:
+	 create a test.ncl which include:(
+  							(SEAT A ‘2’)
+  							PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a function name?
+7.function int parse_listfunc(tokens, num, cur):
+	I create a test.ncl which include:(
+  							(SET A ‘d-2’)
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a list?
+8.function int parse_intfunc(tokens, num, cur):
+	I create a test.ncl which include:(
+  							(PLUS A ‘d-2’)
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a list?
+9.function int parse_boolfunc(tokens, num, cur):
+	I create a test.ncl which include:(
+  							(LESS A ‘d-2’)
+  							(PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a list?
+
+10.function int parse_set:
+	I create a test.ncl which include:(
+  							(SET “A” ‘2’)
+  							)PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a VAR?
+
+11.function int parse_print:
+	I create a test.ncl which include:(
+  							(SET A ‘2’)
+  							)PRINT SET)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	Was expecting a LIST?
+
+12.function int parse_if:
+	I create a test.ncl which include:(
+  							(IF( (EQUAL ‘1’ ‘1’)((PRINT “CONGRATS”))(SET A ‘2’)))
+							PRINT A)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	parse OK
+	CONGRATS
+
+13.function int parse_loop:
+	I create a test.ncl which include:(
+  							(SET C ‘3’)
+							(WHILE (GREATER C ’0’)(
+								(PRINT C)
+								(SET A (PLUS ’-1’ C))
+								(SET C A))
+							)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	parse OK
+ 	3
+	2
+	1
+Extension:
+	Switch:unction int parse_loop:
+	I create a test.ncl which include:(
+						(SET A '3')
+						(SWITCH(A) 
+							(CASE '0'
+								(PRINT A) )
+							(CASE '1'
+								(PRINT '3') )
+							(CASE '2'
+								(PRINT '35'))
+							(CASE '3'
+								(PRINT '22'))
+							)
+						)
+	then code a program which use this function to read the test.ncl. After that, I can get : 
+	parse OK
+ 	22
+

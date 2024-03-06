@@ -1,0 +1,6 @@
+id	name	price	category	inStock
+1	ProductA	100	Electronics	TRUE
+2	ProductB	200	Electronics	FALSE
+3	ProductC	150	Clothing	TRUE
+4	ProductD	250	Clothing	FALSE
+5	ProductE	50	Accessories	TRUE

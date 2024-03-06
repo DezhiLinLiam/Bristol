@@ -1,0 +1,5 @@
+id	name	price	in_stock
+1	Product A	100	TRUE
+2	Product B	200	TRUE
+3	Product C	300	FALSE
+4	Product D	400	FALSE

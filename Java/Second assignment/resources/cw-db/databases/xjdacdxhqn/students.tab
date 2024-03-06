@@ -1,0 +1,6 @@
+id	name	age	grade	passed
+1	Alice	25	85	TRUE
+2	Bob	24	75	TRUE
+3	Cathy	23	90	TRUE
+4	David	22	60	FALSE
+5	Eva	21	95	TRUE
